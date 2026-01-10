@@ -1,0 +1,24 @@
+# API前缀
+missyou:
+  api-package: com.lin.missyou.api
+  year-codes: A,B,C,D,E,F,G,H,I,J,K,L
+
+# 把开发环境的配置和生产环境的配置文件分开
+spring:
+  profiles:
+    active: dev #激活开发环境配置文件
+  jpa:
+    hibernate:
+      ddl-auto: none #禁止生成表
+      #ddl-auto: update #
+      #ddl-auto: create-drop #每次启动APP都会删除重建表, 用于测试
+  jackson: #序列化库
+    property-naming-strategy: SNAKE_CASE #返回前端的Key改为下划线格式
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: true #把可读的UTC时间改成13位的时间戳
+
+# 微信JWT相关
+wx:
+  appid: wx60aed8f91fb9fbf4
+  appsecret: 749a81ef52e3512c050ef9651700fc60
+  code2session: https://api.weixin.qq.com/sns/jscode2session?appid={0}&secret={1}&js_code={2}&grant_type=authorization_code
