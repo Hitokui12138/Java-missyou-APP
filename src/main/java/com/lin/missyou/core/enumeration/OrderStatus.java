@@ -13,7 +13,7 @@ public enum OrderStatus {
     PAID(2, "已支付"),
     DELIVERED(3, "已发货"),
     FINISHED(4, "已完成"), //用户或者快递员送完货点击
-    CANCELED(5, "已取消"), //用户取消订单, 延迟支付到期时系统更新
+    CANCELED(5, "已取消"), //用户取消订单 或者 延迟支付到期时系统更新
 
     // 预扣除库存不存在以下这两种情况
     PAID_BUT_OUT_OF(21, "已支付，但无货或库存不足"),

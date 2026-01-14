@@ -30,3 +30,11 @@ missyou:
     max-sku-limit: 777 #最大购买数量
     pay-time-limit: 3600
 
+# 自定义RocketMQ的Group
+rocketmq:
+  producer:
+    producer-group: SleeveProducerGroup
+  namesrv-addr: 127.0.0.1:9876
+  consumer:
+    consumer-group: SleeveConsumerGroup
+
